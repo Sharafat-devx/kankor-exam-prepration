@@ -32,7 +32,7 @@
 
   if(!document.querySelector('.learning-focus-strip')){
     const main = document.querySelector('main');
-    if(main && file !== 'student-home.html'){
+    if(false && main && file !== 'student-home.html'){
       const strip = document.createElement('div');
       strip.className = 'learning-focus-strip';
       strip.innerHTML = `

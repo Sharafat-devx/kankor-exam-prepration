@@ -1675,3 +1675,293 @@ html, body{
     font-size:13px;
   }
 }
+
+
+/* KEP v6.3.2 — Mobile Experience Fix
+   Fixes: clipped cards, old mode strip, bottom nav overlap, giant mobile headings,
+   and cramped mobile navigation. */
+
+@media(max-width: 860px){
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden!important;
+  }
+
+  body{
+    padding-bottom:104px;
+  }
+
+  .container{
+    width:100%!important;
+    max-width:100%!important;
+    padding-left:18px!important;
+    padding-right:18px!important;
+  }
+
+  .section{
+    padding-top:42px!important;
+    padding-bottom:42px!important;
+  }
+
+  .hero,
+  .compact-hero,
+  .student-home-hero,
+  .setup-hero,
+  .admin-hero{
+    padding-top:42px!important;
+    padding-bottom:44px!important;
+  }
+
+  .hero-grid,
+  .grid,
+  .grid.two,
+  .grid.three,
+  .grid.four,
+  .simple-choice-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    width:100%!important;
+    gap:16px!important;
+  }
+
+  .card,
+  .hero-card,
+  .role-card,
+  .simple-choice-card,
+  .form-card{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    overflow:hidden;
+  }
+
+  .simple-choice-card{
+    min-height:auto!important;
+    padding:22px 22px!important;
+    border-radius:24px!important;
+  }
+
+  .simple-choice-card .icon,
+  .card .icon{
+    width:58px!important;
+    height:58px!important;
+    border-radius:20px!important;
+    margin-bottom:18px!important;
+  }
+
+  .simple-choice-card h3,
+  .card h3{
+    font-size:26px!important;
+    line-height:1.15!important;
+    margin-bottom:8px!important;
+  }
+
+  .simple-choice-card p,
+  .card p{
+    font-size:17px!important;
+    line-height:1.55!important;
+  }
+
+  .simple-choice-card .link{
+    display:inline-flex!important;
+    margin-top:12px!important;
+    font-size:18px!important;
+    line-height:1.2!important;
+  }
+
+  h1,
+  .hero h1,
+  .compact-hero h1,
+  body[data-kep-area="student"] .hero h1,
+  body[data-kep-area="student"] .compact-hero h1,
+  body[data-kep-area="developer"] .hero h1,
+  body[data-kep-area="developer"] .compact-hero h1,
+  body[data-kep-area="admin"] .hero h1,
+  body[data-kep-area="admin"] .compact-hero h1{
+    font-size:clamp(40px, 11vw, 58px)!important;
+    line-height:1.03!important;
+    letter-spacing:-0.055em!important;
+    max-width:100%!important;
+    word-break:normal!important;
+    overflow-wrap:break-word!important;
+  }
+
+  .lead,
+  .hero p,
+  .card p{
+    max-width:100%!important;
+  }
+
+  .hero-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:12px!important;
+    width:100%!important;
+  }
+
+  .btn,
+  .hero-actions .btn,
+  .nav-actions .btn{
+    width:100%!important;
+    justify-content:center!important;
+    min-height:56px!important;
+  }
+
+  /* Remove older student mode strip that duplicated navigation and used old labels */
+  .kep-student-back,
+  .student-mode-strip,
+  .student-topbar,
+  .setup-mode-strip,
+  .mode-strip,
+  .role-strip,
+  .subnav-strip,
+  [data-student-shell],
+  [data-mode-strip],
+  .kep-mode-strip{
+    display:none!important;
+  }
+
+  /* Keep the new helper, but make it compact on mobile */
+  .kep-page-helper-inner{
+    display:block!important;
+    padding:12px 18px!important;
+  }
+
+  .kep-page-helper span{
+    display:block!important;
+    font-size:15px!important;
+    line-height:1.45!important;
+  }
+
+  .kep-page-helper nav{
+    display:none!important;
+  }
+
+  /* Header mobile */
+  .header{
+    position:sticky!important;
+    top:0!important;
+    z-index:1000!important;
+    background:rgba(255,255,255,.96)!important;
+    backdrop-filter:blur(12px);
+  }
+
+  .v631-nav,
+  .v63-nav,
+  .v604-nav,
+  .nav{
+    min-height:82px!important;
+    padding-top:12px!important;
+    padding-bottom:12px!important;
+  }
+
+  .v631-nav .logo img,
+  .v63-nav .logo img,
+  .v604-nav .logo img,
+  .logo img{
+    max-height:50px!important;
+  }
+
+  .mobile-toggle{
+    width:54px!important;
+    height:54px!important;
+    border-radius:18px!important;
+    font-size:24px!important;
+  }
+
+  .nav-actions{
+    display:none!important;
+  }
+
+  .nav-links{
+    top:82px!important;
+    left:14px!important;
+    right:14px!important;
+    width:auto!important;
+    max-height:calc(100vh - 110px)!important;
+    overflow:auto!important;
+    border-radius:24px!important;
+    padding:16px!important;
+  }
+
+  .nav-links a{
+    width:100%!important;
+    justify-content:center!important;
+    min-height:50px!important;
+  }
+
+  /* Bottom app nav */
+  .student-bottom-nav{
+    left:12px!important;
+    right:12px!important;
+    bottom:14px!important;
+    width:auto!important;
+    max-width:none!important;
+    padding:9px!important;
+    border-radius:28px!important;
+    z-index:1200!important;
+    box-shadow:0 14px 36px rgba(15,23,42,.18)!important;
+  }
+
+  .student-bottom-nav a{
+    min-width:0!important;
+    padding:8px 5px!important;
+    border-radius:20px!important;
+    font-size:12px!important;
+    line-height:1.1!important;
+  }
+
+  .student-bottom-nav a span:first-child{
+    font-size:20px!important;
+    line-height:1!important;
+    margin-bottom:4px!important;
+  }
+
+  /* iPhone browser bar/bottom nav safety */
+  main{
+    padding-bottom:88px!important;
+  }
+
+  .kep-footer{
+    margin-bottom:92px!important;
+  }
+
+  /* Tables and forms */
+  .table-wrap{
+    max-width:100%!important;
+    overflow-x:auto!important;
+  }
+
+  input, select, textarea{
+    font-size:16px!important; /* prevents iOS zoom */
+  }
+}
+
+@media(max-width: 430px){
+  .container{
+    padding-left:14px!important;
+    padding-right:14px!important;
+  }
+
+  h1,
+  .hero h1,
+  .compact-hero h1{
+    font-size:clamp(36px, 10.5vw, 50px)!important;
+  }
+
+  .simple-choice-card{
+    padding:20px!important;
+  }
+
+  .simple-choice-card h3{
+    font-size:24px!important;
+  }
+
+  .student-bottom-nav{
+    left:10px!important;
+    right:10px!important;
+    bottom:12px!important;
+  }
+}

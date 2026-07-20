@@ -1,4 +1,4 @@
-# KEP v6.3.1 — Kankor Exam Preparation
+# KEP v6.3.2 — Kankor Exam Preparation
 
 This is the modern starter website for KEP, rebuilt from the original Kankor Exam Preparation FYP idea into a web-first education platform.
 
@@ -11,6 +11,17 @@ This is the modern starter website for KEP, rebuilt from the original Kankor Exa
 
 
 
+
+## v6.3.2 updates — Mobile Experience Fix
+
+- Fixed mobile card clipping.
+- Fixed bottom student navigation overlap.
+- Removed duplicate Student Mode strip on mobile/student pages.
+- Improved mobile header, menu, buttons, and spacing.
+- Updated old visible v4/v5 labels.
+- Added `KEP_v6_3_2_Mobile_Fix_Report.md`.
+- Added `/docs/KEP_v6_3_2_Mobile_Test_Checklist.md`.
+- No SQL required.
 
 ## v6.3.1 updates — Full Website Review & Navigation Polish
 

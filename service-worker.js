@@ -1,4 +1,4 @@
-const CACHE_NAME='kep-v6.3.1';
+const CACHE_NAME='kep-v6.3.2';
 const ASSETS=[
   "./",
   "FILE_MANIFEST_v6.0.json",
@@ -70,7 +70,9 @@ const ASSETS=[
   "KEP_v6_1_Content_Launch_Pack_Guide.md",
   "KEP_v6_2_Check_Report.md",
   "KEP_v6_2_Tester_Feedback_Guide.md",
+  "KEP_v6_3_1_Check_Report.md",
   "KEP_v6_3_1_Full_Website_Review_Report.md",
+  "KEP_v6_3_2_Mobile_Fix_Report.md",
   "KEP_v6_3_Check_Report.md",
   "KEP_v6_3_Simplify_Launch_Mode_Guide.md",
   "README.md",
@@ -117,6 +119,7 @@ const ASSETS=[
   "docs/KEP_v6_0_Security_Checklist.md",
   "docs/KEP_v6_1_Content_Review_Checklist.md",
   "docs/KEP_v6_2_First_Tester_Checklist.md",
+  "docs/KEP_v6_3_2_Mobile_Test_Checklist.md",
   "docs/KEP_v6_3_Simple_First_Test_Plan.md",
   "docs/nav-layout-before-v6.0.3.js.txt",
   "feedback.js",
